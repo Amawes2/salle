@@ -11,16 +11,18 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('gyms', function (Blueprint $table) {
-            $table->id();
-            $table->string('name');
-            $table->string('slug')->unique();
-            $table->foreignId('owner_id')->constrained('users')->cascadeOnDelete();
-            $table->string('plan_saas')->default('basic');
-            $table->boolean('is_active')->default(true);
-            $table->date('expires_at')->nullable();
-            $table->timestamps();
-        });
+        if (! Schema::hasTable('gyms')) {
+            Schema::create('gyms', function (Blueprint $table) {
+                $table->id();
+                $table->string('name');
+                $table->string('slug')->unique();
+                $table->foreignId('owner_id')->constrained('users')->cascadeOnDelete();
+                $table->string('plan_saas')->default('basic');
+                $table->boolean('is_active')->default(true);
+                $table->date('expires_at')->nullable();
+                $table->timestamps();
+            });
+        }
     }
 
     /**
@@ -28,6 +30,7 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('gyms');
+        // Intentionally left blank to avoid dropping gyms table twice
+        // when both gyms migrations exist.
     }
 };
