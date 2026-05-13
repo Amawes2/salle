@@ -13,7 +13,7 @@ return new class extends Migration
             $table->string('name');
             $table->string('slug')->unique();
             $table->foreignId('owner_id')->constrained('users')->cascadeOnDelete();
-            $table->string('plan_saas')->default('basic');
+            $table->enum('plan_saas', ['basic', 'premium'])->default('basic');
             $table->boolean('is_active')->default(true);
             $table->date('expires_at')->nullable();
             $table->timestamps();

@@ -20,10 +20,10 @@
                 </div>
 
                 <div class="flex flex-wrap items-center gap-3 text-sm">
-                    <a href="{{ url('/admin/login') }}" class="hidden rounded-full border border-slate-700/90 px-4 py-2 font-semibold text-slate-300 transition hover:border-slate-600 hover:bg-slate-900/80 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-300 sm:inline-flex">
+                    <a href="{{ url('/admin/login') }}" class="hidden rounded-full border border-slate-700/90 px-4 py-2 font-semibold text-slate-300 transition hover:border-slate-600 hover:bg-slate-900/80 sm:inline-flex">
                         Connexion
                     </a>
-                    <a href="{{ route('gyms.register') }}" class="inline-flex rounded-full bg-cyan-500 px-5 py-2.5 font-semibold text-white shadow-[0_18px_40px_rgba(34,211,238,0.18)] transition hover:bg-cyan-400 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-200">
+                    <a href="{{ route('gyms.register') }}" class="inline-flex rounded-full bg-cyan-500 px-5 py-2.5 font-semibold text-white shadow-[0_18px_40px_rgba(34,211,238,0.18)] transition hover:bg-cyan-400">
                         Créer une salle
                     </a>
                 </div>
@@ -41,10 +41,10 @@
                             Un tableau de bord clair pour suivre tes clients, abonnements, paiements et opérations quotidiennes avec style et vitesse.
                         </p>
                         <div class="flex flex-col gap-4 sm:flex-row">
-                            <a href="{{ route('gyms.register') }}" class="inline-flex items-center justify-center rounded-2xl bg-cyan-500 px-6 py-3 text-sm font-bold text-white shadow-[0_18px_40px_rgba(34,211,238,0.2)] transition hover:bg-cyan-400 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-200">
+                            <a href="{{ route('gyms.register') }}" class="inline-flex items-center justify-center rounded-2xl bg-cyan-500 px-6 py-3 text-sm font-bold text-white shadow-[0_18px_40px_rgba(34,211,238,0.2)] transition hover:bg-cyan-400">
                                 Essayer gratuitement
                             </a>
-                            <a href="{{ url('/admin/login') }}" class="inline-flex items-center justify-center rounded-2xl border border-slate-700 bg-slate-900/80 px-6 py-3 text-sm font-bold text-slate-200 transition hover:border-slate-600 hover:bg-slate-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-200">
+                            <a href="{{ url('/admin/login') }}" class="inline-flex items-center justify-center rounded-2xl border border-slate-700 bg-slate-900/80 px-6 py-3 text-sm font-bold text-slate-200 transition hover:border-slate-600 hover:bg-slate-900">
                                 Accéder à l’administration
                             </a>
                         </div>
@@ -142,48 +142,6 @@
                     <p class="text-sm uppercase tracking-[0.28em] text-cyan-300">Support</p>
                     <h3 class="mt-4 text-2xl font-black text-white">Prêt pour la croissance.</h3>
                     <p class="mt-3 text-sm leading-6 text-slate-400">Des outils pensés pour l’échelle, avec une expérience premium et professionnelle.</p>
-                </div>
-            </section>
-
-            <section class="relative z-10 mt-10 rounded-[2rem] border border-slate-800/80 bg-slate-900/95 p-6 shadow-2xl shadow-slate-950/30 sm:p-8">
-                <div class="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
-                    <div>
-                        <p class="text-sm uppercase tracking-[0.28em] text-cyan-300">Offres SaaS</p>
-                        <h3 class="mt-3 text-3xl font-black text-white">Choisis un plan adapté à ta salle.</h3>
-                    </div>
-                    <a href="{{ route('gyms.register') }}" class="inline-flex items-center justify-center rounded-xl bg-cyan-500 px-5 py-2.5 text-sm font-bold text-white transition hover:bg-cyan-400 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-200">
-                        Démarrer maintenant
-                    </a>
-                </div>
-
-                <div class="mt-6 grid gap-4 md:grid-cols-3">
-                    <article class="rounded-2xl border border-slate-800 bg-slate-950/90 p-5">
-                        <p class="text-xs uppercase tracking-[0.28em] text-slate-500">Basic</p>
-                        <p class="mt-3 text-3xl font-black text-white">29€<span class="text-base font-semibold text-slate-400">/mois</span></p>
-                        <ul class="mt-4 space-y-2 text-sm text-slate-300">
-                            <li>• Gestion membres & abonnements</li>
-                            <li>• Suivi des paiements</li>
-                            <li>• 1 salle</li>
-                        </ul>
-                    </article>
-                    <article class="rounded-2xl border border-cyan-500/50 bg-gradient-to-b from-cyan-500/10 to-slate-950/90 p-5">
-                        <p class="text-xs uppercase tracking-[0.28em] text-cyan-300">Pro</p>
-                        <p class="mt-3 text-3xl font-black text-white">79€<span class="text-base font-semibold text-slate-300">/mois</span></p>
-                        <ul class="mt-4 space-y-2 text-sm text-slate-200">
-                            <li>• Alertes intelligentes</li>
-                            <li>• Rapports avancés</li>
-                            <li>• Multi-utilisateurs</li>
-                        </ul>
-                    </article>
-                    <article class="rounded-2xl border border-slate-800 bg-slate-950/90 p-5">
-                        <p class="text-xs uppercase tracking-[0.28em] text-slate-500">Enterprise</p>
-                        <p class="mt-3 text-3xl font-black text-white">Sur devis</p>
-                        <ul class="mt-4 space-y-2 text-sm text-slate-300">
-                            <li>• Multi-sites</li>
-                            <li>• Support prioritaire</li>
-                            <li>• Accompagnement dédié</li>
-                        </ul>
-                    </article>
                 </div>
             </section>
         </div>
