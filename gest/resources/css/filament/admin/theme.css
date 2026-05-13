@@ -1,0 +1,57 @@
+@import '../../../../vendor/filament/filament/resources/css/theme.css';
+
+@source '../../../../app/Filament/**/*';
+@source '../../../../resources/views/filament/**/*';
+
+@layer base {
+    :root {
+        color-scheme: dark;
+        background-color: #030712;
+        color: #e2e8f0;
+    }
+
+    body {
+        background-color: #030712;
+        color: #e2e8f0;
+    }
+
+    .filament-sidebar {
+        background-color: #020a1a;
+    }
+
+    .filament-sidebar a,
+    .filament-sidebar button {
+        color: #cbd5e1;
+    }
+
+    .fi-card,
+    .fi-card-section,
+    .fi-page,
+    .filament-page {
+        background-color: rgba(15, 23, 42, 0.96);
+        border-color: rgba(148, 163, 184, 0.12);
+    }
+}
+
+@layer utilities {
+    .bg-dashboard {
+        @apply bg-slate-950/90;
+    }
+
+    .dashboard-panel {
+        @apply rounded-3xl border border-slate-800/60 shadow-2xl shadow-slate-950/20 bg-slate-900/95;
+    }
+
+    .dashboard-header {
+        @apply text-slate-100;
+    }
+
+    .dashboard-metric {
+        @apply text-slate-200;
+    }
+
+    .dashboard-accent {
+        @apply text-emerald-400;
+    }
+}
+
