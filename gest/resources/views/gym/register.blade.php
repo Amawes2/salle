@@ -84,6 +84,15 @@
             max-width: 52ch;
         }
 
+        .benefits {
+            margin: 18px 0 0;
+            padding-left: 18px;
+            display: grid;
+            gap: 8px;
+            color: rgba(255, 255, 255, 0.88);
+            font-size: 14px;
+        }
+
         .content {
             padding: 22px 20px 24px;
             background: white;
@@ -141,6 +150,11 @@
             transform: translateY(-1px);
         }
 
+        .field input[aria-invalid="true"] {
+            border-color: #e11d48;
+            background: #fff1f2;
+        }
+
         .hint {
             margin: 2px 0 0;
             font-size: 12px;
@@ -166,6 +180,12 @@
 
         .back-link:hover {
             color: #0f172a;
+        }
+
+        .back-link:focus-visible,
+        .btn:focus-visible {
+            outline: none;
+            box-shadow: 0 0 0 4px rgba(15, 23, 42, 0.18), 0 0 0 6px rgba(244, 63, 94, 0.32);
         }
 
         .btn {
@@ -256,6 +276,11 @@
             Commencez avec un espace vide, puis ajoutez vos clients, vos abonnements et vos paiements.
             Chaque salle garde ses propres données.
         </p>
+        <ul class="benefits">
+            <li>✅ Inscription en moins de 2 minutes</li>
+            <li>✅ Tableau de bord prêt à l’emploi</li>
+            <li>✅ Accès sécurisé pour votre équipe</li>
+        </ul>
     </section>
 
     <section class="content">
@@ -275,37 +300,37 @@
 
             <div class="field">
                 <label for="gym_name">Nom de la salle</label>
-                <input id="gym_name" name="gym_name" type="text" required value="{{ old('gym_name') }}" placeholder="Ex. Fitness Hub Dakar">
+                <input id="gym_name" name="gym_name" type="text" required autocomplete="organization" value="{{ old('gym_name') }}" placeholder="Ex. Fitness Hub Dakar" aria-invalid="{{ $errors->has('gym_name') ? 'true' : 'false' }}">
             </div>
 
             <div class="field">
                 <label for="name">Votre nom complet</label>
-                <input id="name" name="name" type="text" required value="{{ old('name') }}" placeholder="Ex. Mamadou Diop">
+                <input id="name" name="name" type="text" required autocomplete="name" value="{{ old('name') }}" placeholder="Ex. Mamadou Diop" aria-invalid="{{ $errors->has('name') ? 'true' : 'false' }}">
             </div>
 
             <div class="field">
                 <label for="email">Email de connexion</label>
-                <input id="email" name="email" type="email" required value="{{ old('email') }}" placeholder="vous@salle.com">
+                <input id="email" name="email" type="email" required autocomplete="email" value="{{ old('email') }}" placeholder="vous@salle.com" aria-invalid="{{ $errors->has('email') ? 'true' : 'false' }}">
             </div>
 
             <div class="two-col">
                 <div class="field">
                     <label for="password">Mot de passe</label>
-                    <input id="password" name="password" type="password" required minlength="12" placeholder="12 caracteres minimum">
+                    <input id="password" name="password" type="password" required minlength="12" autocomplete="new-password" placeholder="12 caractères minimum" aria-invalid="{{ $errors->has('password') ? 'true' : 'false' }}">
                 </div>
 
                 <div class="field">
                     <label for="password_confirmation">Confirmer le mot de passe</label>
-                    <input id="password_confirmation" name="password_confirmation" type="password" required minlength="12" placeholder="Retaper le mot de passe">
+                    <input id="password_confirmation" name="password_confirmation" type="password" required minlength="12" autocomplete="new-password" placeholder="Retaper le mot de passe">
                 </div>
             </div>
 
             <p class="hint">
-                Le mot de passe doit contenir au moins 12 caracteres, avec majuscule, minuscule, chiffre et symbole.
+                Le mot de passe doit contenir au moins 12 caractères, avec majuscule, minuscule, chiffre et symbole.
             </p>
 
             <p class="hint">
-                Le compte cree aura l acces administrateur de votre salle. En cas de perte d acces,
+                Le compte créé aura l’accès administrateur de votre salle. En cas de perte d’accès,
                 utilisez la
                 <a href="{{ route('filament.admin.auth.password-reset.request') }}">recuperation de mot de passe</a>
                 depuis la page de connexion.
