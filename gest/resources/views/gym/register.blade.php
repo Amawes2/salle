@@ -277,9 +277,9 @@
             Chaque salle garde ses propres données.
         </p>
         <ul class="benefits">
-            <li>✅ Inscription en moins de 2 minutes</li>
-            <li>✅ Tableau de bord prêt à l’emploi</li>
-            <li>✅ Accès sécurisé pour votre équipe</li>
+            <li>Inscription en moins de 2 minutes</li>
+            <li>Tableau de bord prêt à l’emploi</li>
+            <li>Accès sécurisé pour votre équipe</li>
         </ul>
     </section>
 

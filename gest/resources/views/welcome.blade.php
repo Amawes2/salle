@@ -20,7 +20,8 @@
                 </div>
 
                 <div class="flex flex-wrap items-center gap-3 text-sm">
-                    <a href="{{ url('/admin/login') }}" class="hidden rounded-full border border-slate-700/90 px-4 py-2 font-semibold text-slate-300 transition hover:border-slate-600 hover:bg-slate-900/80 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-300 sm:inline-flex">
+                    <a href="{{ url('/admin/login') }}"
+                       class="rounded-full border border-slate-700/90 px-4 py-2 font-semibold text-slate-300 transition hover:border-slate-600 hover:bg-slate-900/80 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-300">
                         Connexion
                     </a>
                     <a href="{{ route('gyms.register') }}" class="inline-flex rounded-full bg-cyan-500 px-5 py-2.5 font-semibold text-white shadow-[0_18px_40px_rgba(34,211,238,0.18)] transition hover:bg-cyan-400 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-200">
@@ -44,24 +45,6 @@
                             <a href="{{ route('gyms.register') }}" class="inline-flex items-center justify-center rounded-2xl bg-cyan-500 px-6 py-3 text-sm font-bold text-white shadow-[0_18px_40px_rgba(34,211,238,0.2)] transition hover:bg-cyan-400 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-200">
                                 Essayer gratuitement
                             </a>
-                            <a href="{{ url('/admin/login') }}" class="inline-flex items-center justify-center rounded-2xl border border-slate-700 bg-slate-900/80 px-6 py-3 text-sm font-bold text-slate-200 transition hover:border-slate-600 hover:bg-slate-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-200">
-                                Accéder à l’administration
-                            </a>
-                        </div>
-                    </div>
-
-                    <div class="grid gap-4 sm:grid-cols-3">
-                        <div class="rounded-[1.75rem] border border-slate-800/70 bg-slate-900/80 p-5 shadow-[0_24px_60px_rgba(15,23,42,0.25)] transition hover:-translate-y-1 hover:border-cyan-500/40">
-                            <p class="text-[11px] font-semibold uppercase tracking-[0.24em] text-slate-500">Clients</p>
-                            <p class="mt-3 text-lg font-semibold text-white">Suivi simple des membres</p>
-                        </div>
-                        <div class="rounded-[1.75rem] border border-slate-800/70 bg-slate-900/80 p-5 shadow-[0_24px_60px_rgba(15,23,42,0.25)] transition hover:-translate-y-1 hover:border-cyan-500/40">
-                            <p class="text-[11px] font-semibold uppercase tracking-[0.24em] text-slate-500">Abonnements</p>
-                            <p class="mt-3 text-lg font-semibold text-white">Gestion claire des formules</p>
-                        </div>
-                        <div class="rounded-[1.75rem] border border-slate-800/70 bg-slate-900/80 p-5 shadow-[0_24px_60px_rgba(15,23,42,0.25)] transition hover:-translate-y-1 hover:border-cyan-500/40">
-                            <p class="text-[11px] font-semibold uppercase tracking-[0.24em] text-slate-500">Paiements</p>
-                            <p class="mt-3 text-lg font-semibold text-white">Relances et encaissements</p>
                         </div>
                     </div>
                 </section>
@@ -70,18 +53,7 @@
                     <div class="absolute -right-10 top-4 h-28 w-28 rounded-full bg-cyan-500/20 blur-3xl"></div>
                     <div class="absolute -left-10 bottom-6 h-36 w-36 rounded-full bg-orange-500/10 blur-3xl"></div>
                     <div class="relative space-y-6">
-                        <div class="rounded-[2rem] border border-slate-800/70 bg-slate-950/95 p-5 shadow-[0_18px_50px_rgba(15,23,42,0.3)]">
-                            <p class="text-sm font-semibold uppercase tracking-[0.24em] text-cyan-300">Tableau de bord</p>
-                            <div class="mt-4 flex items-center justify-between gap-4">
-                                <div>
-                                    <p class="text-4xl font-black text-white">98%</p>
-                                    <p class="mt-2 text-sm text-slate-400">Taux de rétention</p>
-                                </div>
-                                <div class="rounded-3xl bg-slate-950/80 px-4 py-3 text-sm text-slate-300">
-                                    +18% ce mois
-                                </div>
-                            </div>
-                        </div>
+                        
 
                         <div class="grid gap-4 sm:grid-cols-2">
                             <div class="rounded-[1.75rem] border border-slate-800/70 bg-slate-950/95 p-5">
@@ -127,24 +99,6 @@
                 </section>
             </main>
 
-            <section class="relative z-10 mt-12 grid gap-6 lg:grid-cols-3">
-                <div class="rounded-[2rem] border border-slate-800/80 bg-slate-900/95 p-6 shadow-2xl shadow-slate-950/30">
-                    <p class="text-sm uppercase tracking-[0.28em] text-cyan-300">Performance</p>
-                    <h3 class="mt-4 text-2xl font-black text-white">Une interface plus rapide.</h3>
-                    <p class="mt-3 text-sm leading-6 text-slate-400">Toutes les données importantes sont accessibles en un clic, pour que tes équipes accélèrent.</p>
-                </div>
-                <div class="rounded-[2rem] border border-slate-800/80 bg-slate-900/95 p-6 shadow-2xl shadow-slate-950/30">
-                    <p class="text-sm uppercase tracking-[0.28em] text-cyan-300">Sécurité</p>
-                    <h3 class="mt-4 text-2xl font-black text-white">Contrôle et confidentialité.</h3>
-                    <p class="mt-3 text-sm leading-6 text-slate-400">Rôle admin, vue contrôlée et données protégées dans un dashboard simple.</p>
-                </div>
-                <div class="rounded-[2rem] border border-slate-800/80 bg-slate-900/95 p-6 shadow-2xl shadow-slate-950/30">
-                    <p class="text-sm uppercase tracking-[0.28em] text-cyan-300">Support</p>
-                    <h3 class="mt-4 text-2xl font-black text-white">Prêt pour la croissance.</h3>
-                    <p class="mt-3 text-sm leading-6 text-slate-400">Des outils pensés pour l’échelle, avec une expérience premium et professionnelle.</p>
-                </div>
-            </section>
-
             <section class="relative z-10 mt-10 rounded-[2rem] border border-slate-800/80 bg-slate-900/95 p-6 shadow-2xl shadow-slate-950/30 sm:p-8">
                 <div class="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
                     <div>
@@ -164,24 +118,9 @@
                             <li>• Gestion membres & abonnements</li>
                             <li>• Suivi des paiements</li>
                             <li>• 1 salle</li>
-                        </ul>
-                    </article>
-                    <article class="rounded-2xl border border-cyan-500/50 bg-gradient-to-b from-cyan-500/10 to-slate-950/90 p-5">
-                        <p class="text-xs uppercase tracking-[0.28em] text-cyan-300">Pro</p>
-                        <p class="mt-3 text-3xl font-black text-white">79€<span class="text-base font-semibold text-slate-300">/mois</span></p>
-                        <ul class="mt-4 space-y-2 text-sm text-slate-200">
                             <li>• Alertes intelligentes</li>
                             <li>• Rapports avancés</li>
                             <li>• Multi-utilisateurs</li>
-                        </ul>
-                    </article>
-                    <article class="rounded-2xl border border-slate-800 bg-slate-950/90 p-5">
-                        <p class="text-xs uppercase tracking-[0.28em] text-slate-500">Enterprise</p>
-                        <p class="mt-3 text-3xl font-black text-white">Sur devis</p>
-                        <ul class="mt-4 space-y-2 text-sm text-slate-300">
-                            <li>• Multi-sites</li>
-                            <li>• Support prioritaire</li>
-                            <li>• Accompagnement dédié</li>
                         </ul>
                     </article>
                 </div>

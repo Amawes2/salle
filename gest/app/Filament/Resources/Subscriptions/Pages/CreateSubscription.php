@@ -51,6 +51,7 @@ class CreateSubscription extends CreateRecord
                     ->label('Téléphone')
                     ->tel()
                     ->required()
+                    ->unique(table: 'members', column: 'phone')
                     ->maxLength(20),
 
                 TextInput::make('id_document_number')

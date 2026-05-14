@@ -1,8 +1,8 @@
 <x-filament-panels::page>
-    <div class="flex flex-col h-[70vh] bg-white dark:bg-gray-800 rounded-xl shadow-sm overflow-hidden">
+    <div class="flex flex-col min-h-[70vh] max-h-[calc(100vh-7rem)] w-full bg-white dark:bg-gray-800 rounded-xl shadow-sm overflow-hidden">
         <div class="flex h-full">
             <!-- Conversations Sidebar -->
-            <div class="w-1/4 border-r border-gray-200 dark:border-gray-700 flex flex-col">
+            <div class="w-1/3 lg:w-1/4 border-r border-gray-200 dark:border-gray-700 flex flex-col">
                 <div class="p-4 border-b border-gray-200 dark:border-gray-700 flex justify-between items-center">
                     <h2 class="text-lg font-medium text-gray-900 dark:text-gray-100">Conversations</h2>
                     <button 
