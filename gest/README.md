@@ -21,6 +21,59 @@ Laravel is a web application framework with expressive, elegant syntax. We belie
 
 Laravel is accessible, powerful, and provides tools required for large, robust applications.
 
+## Project quick start (Gym SaaS)
+
+1. Install dependencies:
+
+```bash
+composer install
+```
+
+2. Create local env file:
+
+```bash
+cp .env.example .env
+php artisan key:generate
+```
+
+3. If you use SQLite (default), create the database file:
+
+```bash
+touch database/database.sqlite
+```
+
+4. Run migrations and (optionally) seeders:
+
+```bash
+php artisan migrate
+php artisan db:seed
+```
+
+5. Start local server:
+
+```bash
+php artisan serve
+```
+
+### Common error: `SQLite database does not exist`
+
+If you see an error like:
+`Database file .../database/database.sqlite does not exist`
+
+check these values in `.env`:
+
+```env
+DB_CONNECTION=sqlite
+DB_DATABASE=database/database.sqlite
+SESSION_DRIVER=file
+```
+
+Then clear cached config:
+
+```bash
+php artisan optimize:clear
+```
+
 ## Learning Laravel
 
 Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
