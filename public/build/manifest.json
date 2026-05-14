@@ -1,0 +1,33 @@
+{
+  "resources/css/app.css": {
+    "file": "assets/app-B04iS-yy.css",
+    "name": "app",
+    "names": [
+      "app.css"
+    ],
+    "src": "resources/css/app.css",
+    "isEntry": true
+  },
+  "resources/css/filament/admin/theme.css": {
+    "file": "assets/theme-CiV1pnbg.css",
+    "src": "resources/css/filament/admin/theme.css"
+  },
+  "resources/css/filament/super-admin/theme.css": {
+    "file": "assets/theme-CqQAZkDX.css",
+    "name": "theme",
+    "names": [
+      "theme.css"
+    ],
+    "src": "resources/css/filament/super-admin/theme.css",
+    "isEntry": true,
+    "css": [
+      "assets/theme-CiV1pnbg.css"
+    ]
+  },
+  "resources/js/app.js": {
+    "file": "assets/app-Bhbv_g18.js",
+    "name": "app",
+    "src": "resources/js/app.js",
+    "isEntry": true
+  }
+}
