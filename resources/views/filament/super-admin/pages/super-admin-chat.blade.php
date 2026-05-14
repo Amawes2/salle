@@ -166,43 +166,5 @@
     </div>
 
     <!-- New Conversation Modal -->
-    <x-filament::modal id="new-conversation-modal" width="md">
-        <x-slot name="heading">Nouvelle conversation</x-slot>
 
-        <x-slot name="description">
-            Sélectionnez une salle de sport pour démarrer une conversation avec son propriétaire.
-        </x-slot>
-
-        <div class="space-y-4">
-            <div>
-                <x-filament::input.wrapper>
-                    <x-filament::input.select
-                        wire:model="selectedGymId"
-                        placeholder="Sélectionnez une salle de sport"
-                    >
-                        @foreach($this->gyms as $gym)
-                            <option value="{{ $gym->id }}">{{ $gym->name }}</option>
-                        @endforeach
-                    </x-filament::input.select>
-                </x-filament::input.wrapper>
-            </div>
-        </div>
-
-        <x-slot name="footerActions">
-            <x-filament::button
-                x-on:click="$dispatch('close-modal', { id: 'new-conversation-modal' })"
-                color="gray"
-            >
-                Annuler
-            </x-filament::button>
-
-            <x-filament::button
-                wire:click="startNewConversation"
-                x-on:click="$dispatch('close-modal', { id: 'new-conversation-modal' })"
-                :disabled="!$selectedGymId"
-            >
-                Démarrer la conversation
-            </x-filament::button>
-        </x-slot>
-    </x-filament::modal>
 </x-filament-panels::page>
